@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="/medias/css/css1.css"/>
+<style type="text/css">
+
+ul
+{
+float:left;
+width:100%;
+padding:0;
+margin:0;
+list-style-type:none;
+}
+
+</style>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<p align="left"><a href="../">返回上一级</a></p>
+
+
+<body align="center">
+<img src="/medias/picture/hit.png" style="height:250px;" />
+<form action="" name="books" method="post">
+{% csrf_token %}
+
+
+<div style="margin:0 auto; width: 100 px;">
+<table>
+
+<style>
+        /*  在此处填写叠层样式  */
+        table {
+            height: 30%;
+            width: 25%;         /*  必须设置一个宽度， margin: 0 auto才能使之居于父组件中央*/
+            margin: 1px auto;  /*  通过设置外边距（margin）中的左右外边距属性为auto使之居于父组件（body）中间*/
+        }
+
+
+    </style>
+
+
+<tr>
+<th align="left">ISBN:</th>
+<th align="right"><input type="text" name="ISBN" MaxLength="13" {% if list %}value={{list.0}}{% endif %} /></th>
+</tr>
+
+<tr>
+<th align="left">Title:</th>
+<th align="right"><input type="text" name="Title" {% if list %}value="{{list.1}}"{% endif %} /></th>
+</tr>
+
+<tr>
+<th align="left">Author Name:</th>
+<th align="right"><input type="text" name="AuthorName" {% if list %}value="{{list.2}}"{% endif %} /></th>
+<th>{%if exist%}<a href="../author">作者不存在，添加</a>{%endif%}</th>
+</tr>
+
+<tr>
+<th align="left">Publisher:</th>
+<th align="right"><input type="text" name="Publisher" {% if list %}value="{{list.3}}"{% endif %} /></th>
+</tr>
+
+<tr>
+<th align="left">Publish Date:</th>
+
+<th align="right">
+<input type="date" name="date" {% if list %}value={{list.4}}{% endif %} />
+</th>
+</tr>
+
+<tr>
+<th align="left">Price:</th>
+<th align="right"><input type="text" name="Price" style="width:100px" {% if list %}value={{list.5}}{% endif %} />$</th>
+</tr>
+
+<tr>
+<th></th>
+<th align="right"><input type="submit" name="Submit" value="提交"></th>
+</tr>
+</table>
+
+
+</div>
+
+
+</form>
+<font color="red">{{isbn}}</font>
+</body>
+
+
+</html>

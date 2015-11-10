@@ -1,0 +1,44 @@
+﻿<html>
+<link rel="stylesheet" type="text/css" href="/medias/css/css1.css"/>
+<style type="text/css">
+
+ul
+{
+float:left;
+width:100%;
+padding:0;
+margin:0;
+list-style-type:none;
+}
+
+</style>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<p align="left"><a href="../">返回上一级</a></p>
+<body align="center">
+<img src="/medias/picture/hit.png" style="height:250px;" />
+<form action="/author/" name="author" method="post">
+<br />{% csrf_token %}<br />
+
+<table border="0" align="center">
+<tr>
+<th align="left">Name:</th>
+<th><input type="text" name="Name"/></th>
+</tr>
+<tr>
+<th align="left">Age:</th>
+<th><input type="text" name="Age"/></th>
+</tr>
+<tr>
+<th align="left">Country:</th>
+<th><input type="text" name="Country"/></th>
+</tr>
+<tr>
+<th></th>
+<th align="right"><input type="submit" name="Submit" value="提交"></th>
+</tr>
+</table>
+
+</form>
+{{text}}
+</body>
+</html>

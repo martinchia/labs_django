@@ -1,0 +1,41 @@
+﻿
+
+<table border="1" style="background-color:white;opacity: 0.7;">
+
+<style>
+table{
+     border-collapse: collapse;/* 边框合并属性  */
+
+}
+th{
+     border: 1px solid #666666;
+}
+td{
+     border: 1px solid #666666;
+}
+</style>
+<tr>
+<th>ISBN</th>
+<th>Title</th>
+<th>Publisher</th>
+<th>Publish Date</th>
+<th>Price</th>
+<th>作者姓名</th>
+<th>作者年龄</th>
+<th>作者国家</th>
+<th>操作</th>
+</tr>
+<tr>
+{% for a in a_list %}
+	<th>{{a}}</th>
+	
+{% endfor %}
+<th>
+<a href="/book/{{a_list.0}}" target="_parent">修改</a>
+<a href="/delete/{{a_list.0}}" target="_parent">删除</a>
+</th>
+</tr>
+
+
+</table>
+
