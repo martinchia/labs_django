@@ -4,7 +4,7 @@ from django.conf import settings
 from django.contrib import admin
 from books import views
 admin.autodiscover()
-#lalalalalal#
+#lalalalal#
 urlpatterns = patterns('',
     ('^$',views.home),
     (r'^book/',views.books),

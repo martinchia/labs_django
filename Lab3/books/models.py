@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-#kjpoanerngia#
+#kjpoanern#
     
 class Author(models.Model):
     AuthorID  = models.AutoField(primary_key=True)
